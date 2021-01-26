@@ -1,4 +1,3 @@
-require "fixtures/kickstarter.html"
 require "nokogiri"
 
 class Project

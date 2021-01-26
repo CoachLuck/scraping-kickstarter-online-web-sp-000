@@ -5,13 +5,8 @@ class Project
 
   @@all = {}
 
-  def initialize(name, link, description, location, percent_funded)
-    @@all[:name] = {
-      link: link,
-      description: description,
-      location: = location,
-      percent_funded: percent_funded
-    }
+  def initialize
+    @@all << self
   end
 
   def self.all
@@ -19,7 +14,9 @@ class Project
   end
 end
 
-scraper =
+def get_page
+  Nokogiri::HTML(open("fixtures/kickstarter.html"))
+end
 
 def create_project_hash
   # write your code here

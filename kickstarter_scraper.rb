@@ -1,4 +1,4 @@
-require_relative "fixtures/kickstarter.html"
+require "fixtures/kickstarter.html"
 require "nokogiri"
 
 class Project

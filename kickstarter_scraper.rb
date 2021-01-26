@@ -39,10 +39,10 @@ def get_projects(html)
 end
 
 def create_project_hash
-  hash = {}
+  hash = {projects: {}}
   get_projects.each {|project|
     name = project.css("h2.bbcard_name strong a").text
-    hash[name] = {
+    hash[:projects][name] = {
       image_link: project.css("div.project-thumbnail a img").attribute("src").value,
       description: project.css("p.bbcard_blurb").text,
       location: project.css("ul.project-meta li a span.location-name").text,

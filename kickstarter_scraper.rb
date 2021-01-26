@@ -15,7 +15,7 @@ class Project
 end
 
 def get_page
-  Nokogiri::HTML(open("fixtures/kickstarter.html"))
+  Nokogiri::HTML(File.read('fixtures/kickstarter.html'))
 end
 
 def get_projects
@@ -23,9 +23,10 @@ def get_projects
 end
 
 def create_projects
-  get_projects.each {|proj|
+  get_projects.each {|proj| 
     project = Project.new
     project.name = proj.css("bbcard_name").children[0].text
+    project.
     project.description = proj.css("bbcard_blurb").text
   }
 end

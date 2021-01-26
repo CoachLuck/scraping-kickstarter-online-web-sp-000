@@ -50,8 +50,6 @@ def create_project_hash
       percent_funded: project.css("ul.project-stats li.first.funded strong").text
     }
   }
-  
-  p hash
   hash
   # binding.pry
   # projects: kickstarter.css("li.project.grid_4").first

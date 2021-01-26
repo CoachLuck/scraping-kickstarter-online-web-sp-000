@@ -50,7 +50,7 @@ def create_project_hash
     }
   }
 
-  binding.pry
+  # binding.pry
   # projects: kickstarter.css("li.project.grid_4").first
   # name: project.css("h2.bbcard_name strong a").text
   # image link: project.css("div.project-thumbnail a img").attribute("src").value

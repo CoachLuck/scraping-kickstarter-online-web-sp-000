@@ -32,7 +32,7 @@ require "pry"
 #   }
 # end
 
-def get_projects(html)
+def get_projects
   html = File.read('fixtures/kickstarter.html')
   kickstarter = Nokogiri::HTML(html)
   kickstarter.css("li.project.grid_4")

@@ -39,7 +39,7 @@ def get_projects
 end
 
 def create_project_hash
-  hash = {}
+  hash = {projects: {}}
   get_projects.each {|project|
     name = project.css("h2.bbcard_name strong a").text
     hash[:projects][name] = {

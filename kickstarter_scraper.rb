@@ -23,7 +23,7 @@ def get_projects
 end
 
 def create_projects
-  get_projects.each {|proj| 
+  get_projects.each {|proj|
     project = Project.new
     project.name = proj.css("bbcard_name").children[0].text
     project.
